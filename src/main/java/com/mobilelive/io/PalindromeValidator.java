@@ -10,22 +10,6 @@ public class PalindromeValidator {
     // null/empty -> false
 
     /**
-     *  First i will do with Inefficient way
-     *  Time complexity O(N) when we pass value in {@link StringBuilder}
-     *  Time complexity O(N) when reverse will called {@link StringBuilder#reverse()}
-     *  Space complexity will be O(N)
-     *  Where N is the number of characters of value
-     *  @param value
-     *  @return
-     */
-    public boolean isPalindromeUsingStringBuilder(String value) {
-        if(Objects.isNull(value) || value.isBlank()) {
-            return Boolean.FALSE;
-        }
-        return value.equals(new StringBuilder(value).reverse().toString());
-    }
-
-    /**
      * Here is the efficient approach to solve this algorithm
      * Time complexity will be O(N)
      * Space complexity will be O(1)
@@ -46,4 +30,22 @@ public class PalindromeValidator {
         }
         return Boolean.TRUE;
     }
+
+
+    /**
+     *  First i will do with Inefficient way
+     *  Time complexity O(N) when we pass value in {@link StringBuilder}
+     *  Time complexity O(N) when reverse will called {@link StringBuilder#reverse()}
+     *  Space complexity will be O(N)
+     *  Where N is the number of characters of value
+     *  @param value
+     *  @return
+     */
+    public boolean isPalindromeUsingStringBuilder(String value) {
+        if(Objects.isNull(value) || value.isBlank()) {
+            return Boolean.FALSE;
+        }
+        return value.equals(new StringBuilder(value).reverse().toString());
+    }
+
 }
